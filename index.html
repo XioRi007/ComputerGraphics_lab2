@@ -10,6 +10,7 @@
 	<body>
         
 		<script>
+		let url = 'https://github.com/XioRi007/ComputerGraphics_lab2/tree/main';
 
 		
 		init();
@@ -45,9 +46,11 @@
 				scene.add(plane);
 
 						
-				var cube_geometry=new THREE.CubeGeometry(4, 4, 4);
-				//Накладення 1 текстури
-				var cube_material=new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture('https://github.com/XioRi007/ComputerGraphics_lab2/tree/main/images/1.jpg'),overdraw:true});
+				const cube_geometry=new THREE.CubeGeometry(4, 4, 4);
+				//Накладення 1 текстури `${url}/images/1.jpg`
+				const texture = new THREE.TextureLoader().load( `${url}/images/1.jpg` );
+				
+				var cube_material=new THREE.MeshBasicMaterial({map:texture,overdraw:true});
 				cube=new THREE.Mesh(cube_geometry, cube_material);
 				scene.add(cube);
 
