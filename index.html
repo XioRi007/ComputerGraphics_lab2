@@ -31,7 +31,7 @@
 				var trackballcontrols = new THREE.TrackballControls( camera, renderer.domElement );
 		
             	
-				var axes = new THREE.AxisHelper( 20 );
+				var axes = new THREE.AxesHelper( 20 );
                 scene.add(axes);
 				
                 var planeGeometry = new THREE.PlaneGeometry(60,20,1,1);
@@ -47,7 +47,7 @@
 						
 				var cube_geometry=new THREE.CubeGeometry(4, 4, 4);
 				//Накладення 1 текстури
-				var cube_material=new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture('https://github.com/XioRi007/ComputerGraphics_lab2/tree/main/images/1.jpg'),overdraw:true});
+				var cube_material=new THREE.MeshBasicMaterial({map:THREE.ImageUtils.loadTexture('./images/1.jpg')});
 				cube=new THREE.Mesh(cube_geometry, cube_material);
 				scene.add(cube);
 
