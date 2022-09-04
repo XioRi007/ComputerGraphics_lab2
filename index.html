@@ -176,7 +176,7 @@
 				const cone6Folder = gui.addFolder('Cone 6');
 				cone6Folder.add( controls, 'repeat', 1, 100 )
 					.onChange( function() {
-						cone5.material.alphaMap.repeat.set( controls.alphaMap, controls.alphaMap );
+						cone5.material.alphaMap.repeat.set( controls.repeat, controls.repeat );
 					} );
 				cone6Folder.open();
 
