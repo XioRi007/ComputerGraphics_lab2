@@ -154,7 +154,7 @@
 				const controls = new function() {
                 	this.rotationSpeed = 0.02;
 					this.opacity = 1;
-					this.alphaMap = 1;
+					this.repeat = 1;
 					this.material = "LambertMaterial";
                 }();
 			
@@ -174,7 +174,7 @@
 				cone1Folder.open();
 
 				const cone6Folder = gui.addFolder('Cone 6');
-				cone6Folder.add( controls, 'alphaMap', 1, 100 )
+				cone6Folder.add( controls, 'repeat', 1, 100 )
 					.onChange( function() {
 						cone5.material.alphaMap.repeat.set( controls.alphaMap, controls.alphaMap );
 					} );
